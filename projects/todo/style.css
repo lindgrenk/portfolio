@@ -1,0 +1,54 @@
+body {
+	font-family: helvetica;
+}
+h2 {
+	margin: 15px;
+	font-size: 1em;
+}
+li {
+	list-style-type: none;
+	margin: 20px 0;
+	border-bottom: 1px solid pink;
+}
+p {
+	display: inline-block;
+	margin: 10px;
+}
+ul {
+	padding-left: 20px;
+}
+#insert {
+	height: 30px;
+	width: 70px;
+	font-size: 1em;
+}
+#input {
+	font-size: 1em;
+	margin-left: 20px;
+	height: 30px;
+	width: 300px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid black;
+}
+#input:hover {
+	border-bottom: 2px solid pink;
+}
+#input:focus {
+	border-bottom: 2px solid pink;
+}
+button {
+	background-color: #ddd;
+	padding: 0;
+	width: 60px;
+	height: 20px;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+}
+li button {
+	margin: 5px;
+}
+button:hover {
+	background-color: pink;
+}

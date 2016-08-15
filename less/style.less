@@ -1,0 +1,165 @@
+// Variables
+@mobile      : ~'only screen and (max-width : 767px)';
+@tablet      : ~'only screen and (min-width : 768px) and (max-width : 991px)';
+@tabletUp    : ~'only screen and (min-width : 768px)';
+@tabletDown  : ~'only screen and (max-width : 991px)';
+@desktop     : ~'only screen and (min-width : 992px) and (max-width : 1199px)';
+@desktopUp   : ~'only screen and (min-width : 992px)';
+@desktopDown : ~'only screen and (max-width : 1199px)';
+@desktopBig  : ~'only screen and (min-width : 1200px)';
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
+p {
+	margin: 0;
+
+	+ p {
+		margin-top: 1em;
+	}
+}
+
+ul {
+	padding: 0;
+}
+
+.header {
+	height: 450px;
+	position: relative;
+
+	background: url(../img/mist.jpeg) center center;
+	background-size: cover;
+}
+
+.header-nav {
+	position: fixed;
+	z-index: 99;
+	right: 0;
+	left: 0;
+	top: 0;
+
+	background-color: #000;
+
+	text-align: center;
+
+	opacity: 0.8;
+
+	a {
+		padding: 10px 20px;
+		display: inline-block;
+
+		color: #fff;
+		font-size: 14px;
+		text-decoration: none;
+
+		opacity: 0.8;
+		transition: opacity 200ms;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.header-logo {
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	left: 40px;
+	top: 30%;
+
+	transform: translateY(-50%);
+}
+
+.section {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 40px 20px;
+	position: relative;
+
+	transition: all 200ms;
+
+	@media @tabletUp {
+		padding: 80px 20px;
+	}
+
+	> h1, > h2 {
+		text-align: center;
+	}
+
+	+ .section::before {
+		position: absolute;
+		top: 0;
+		left: 20px;
+		right: 20px;
+		height: 1px;
+
+		background-color: #231F20;
+
+		content: '';
+	}
+}
+
+.aboutMe {
+	text-align: center;
+
+	> * + * {
+		margin-top: 20px;
+	}
+
+	@media @tabletUp {
+		display: flex;
+		align-items: center;
+
+		text-align: left;
+
+		> * + * {
+			margin-left: 30px;
+		}
+	}
+}
+
+.portrait {
+	height: 200px;
+	width: 200px;
+
+	border-radius: 50%;
+}
+
+.badges {
+	display: flex;
+	justify-content: space-between;
+	max-width: 300px;
+	margin: 0 auto;
+
+	img {
+		height: 60px;
+
+		transition: all 200ms;
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.expertise {
+	max-width: 600px;
+	margin: 0 auto;
+
+	text-align: center;
+
+	@media @tabletUp {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	ul {
+		margin-top: 2em;
+
+		list-style-type: none;
+	}
+}
