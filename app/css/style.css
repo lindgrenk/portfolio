@@ -1,0 +1,127 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+p {
+  margin: 0;
+}
+p + p {
+  margin-top: 1em;
+}
+ul {
+  padding: 0;
+}
+.header {
+  height: 450px;
+  position: relative;
+  background: url(../img/mist.jpeg) center center;
+  background-size: cover;
+}
+.header-nav {
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  text-align: center;
+  opacity: 0.8;
+}
+.header-nav a {
+  padding: 10px 20px;
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 200ms;
+}
+.header-nav a:hover {
+  opacity: 1;
+}
+.header-logo {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  left: 40px;
+  top: 30%;
+  transform: translateY(-50%);
+}
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  transition: all 200ms;
+}
+@media only screen and (min-width : 768px) {
+  .section {
+    padding: 80px 20px;
+  }
+}
+.section > h1,
+.section > h2 {
+  text-align: center;
+}
+.section + .section::before {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background-color: #231F20;
+  content: '';
+}
+.aboutMe {
+  text-align: center;
+}
+.aboutMe > * + * {
+  margin-top: 20px;
+}
+@media only screen and (min-width : 768px) {
+  .aboutMe {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .aboutMe > * + * {
+    margin-left: 30px;
+  }
+}
+.portrait {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.badges {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.badges img {
+  height: 60px;
+  transition: all 200ms;
+}
+.badges img:hover {
+  transform: scale(1.2);
+}
+.expertise {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media only screen and (min-width : 768px) {
+  .expertise {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.expertise ul {
+  margin-top: 2em;
+  list-style-type: none;
+}
