@@ -53,12 +53,19 @@ ul {
   opacity: 1;
 }
 .header-logo {
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
   position: absolute;
   left: 40px;
-  top: 30%;
+  top: 45%;
   transform: translateY(-50%);
+}
+@media only screen and (min-width : 768px) {
+  .header-logo {
+    height: 120px;
+    width: 120px;
+    top: 30%;
+  }
 }
 .section {
   max-width: 960px;
@@ -228,6 +235,10 @@ ul {
   margin-left: 20px;
   list-style-type: none;
   text-align: center;
+}
+.contact-personal a {
+  color: #000;
+  text-decoration: none;
 }
 @media only screen and (min-width : 768px) {
   .contact-personal {
