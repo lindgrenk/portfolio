@@ -8,10 +8,13 @@
 @desktopDown : ~'only screen and (max-width : 1199px)';
 @desktopBig  : ~'only screen and (min-width : 1200px)';
 
-
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
+	font-family: 'Droid Sans', sans-serif;
 }
 
 p {
@@ -86,10 +89,6 @@ ul {
 		padding: 80px 20px;
 	}
 
-	> h1, > h2 {
-		text-align: center;
-	}
-
 	+ .section::before {
 		position: absolute;
 		top: 0;
@@ -100,6 +99,10 @@ ul {
 		background-color: #231F20;
 
 		content: '';
+	}
+
+	&.section--centered {
+		text-align: center;
 	}
 }
 
@@ -165,9 +168,8 @@ ul {
 }
 
 .button {
-	display: flex;
-	margin: 0 auto;
-	padding: 0;
+	display: inline-block;
+	padding: 15px 30px;
 
 	border-radius: 5px;
 	border-width: 0;
@@ -175,27 +177,113 @@ ul {
 	background-color: #231f20;
 
 	font-size: 12px;
+	text-decoration: none;
+	color: #fff;
 
 	cursor: pointer;
 	opacity: 1;
 	transition: opacity 200ms;
 
 	@media @tabletUp {
-		font-size: 16px;
+		padding: 20px 40px;
 
-		> * {
-			padding: 20px 40px;
-		}
+		font-size: 16px;
 	}
 
 	&:hover {
 		opacity: 0.8;
 	}
+}
 
-	> * {
-		padding: 15px 30px;
+.projects {
+	display: flex;
+	flex-flow: row wrap;
+}
 
-		color: #fff;
-		text-decoration: none;
+.project {
+	position: relative;
+	flex: auto;
+	margin: 10px;
+	width: 250px;
+
+	transition: all 200ms;
+	filter: grayscale(0%); /* Standard CSS */
+	-webkit-filter: grayscale(0%); /* CSS for Webkit Browsers */
+	filter: none;  /* Internet Explorer IE6-9 */
+	-webkit-filter: grayscale(0); /* Old WebKit Browsers */
+
+	&.project:hover {
+		transform: scale(1.1);
+		filter: grayscale(100%);
+		filter: gray;
+		-webkit-filter: grayscale(1); /* Old WebKit */
 	}
+}
+
+.project-thumbnail {
+	height: auto;
+	max-width: 250px;
+
+	border: 2px solid #aaa;
+	border-radius: 50%;
+
+	.project:hover & {
+		opacity: 0.3;
+	}
+}
+
+.project-description {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	z-index: -1;
+
+	.project:hover & {
+		color: #000;
+		z-index: 1;
+	}
+}
+
+.contact {
+	text-align: center;
+	margin-bottom: 50px;
+
+	@media @tabletUp {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.contact-thumbnail {
+	width: 50px;
+	height: auto;
+	margin: 10px;
+
+	opacity: 1;
+	transition: all 200ms;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.contact-personal {
+	margin-left: 20px;
+
+	list-style-type: none;
+	text-align: center;
+
+	@media @tabletUp {
+		text-align: left;
+	}
+}
+
+.contact-logo {
+	width: 70px;
+	height: 100%;
 }

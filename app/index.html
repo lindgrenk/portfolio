@@ -12,22 +12,27 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
 
+	<link rel="shortcut icon" type="image/png" href="img/kl_logo.png"/>
+
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
 	<title>Kristian's Portfolio</title>
 </head>
 <body>
 
 	<header class="header">
 		<nav class="header-nav">
-			<a href="">Om mig</a>
-			<a href="">CV</a>
-			<a href="">Portolio</a>
-			<a href="">Kontakt</a>
+			<a href="#about">Om mig</a>
+			<a href="#cv">CV</a>
+			<a href="#portfolio">Portfolio</a>
+			<a href="#contact">Kontakt</a>
 		</nav>
 
-		<img class="header-logo" src="img/kl_logo.png" alt="">
+		<img class="header-logo" src="img/kl_logo.png">
 	</header>
 
-	<section class="section" id="about">
+	<section class="section section--centered" id="about">
 		<h2>Kristian Lindgren</h2>
 
 		<div class="aboutMe">
@@ -41,7 +46,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section class="section section--centered">
 		<h2>Kunskaper</h2>
 
 		<div class="badges">
@@ -69,13 +74,69 @@
 		</div>
 	</section>
 
-	<section class="section" id="cv">
-		<h2>Ladda ner mitt CV</h2>
+	<section class="section section--centered" id="cv">
+		<h2>Ladda ner CV</h2>
 
-		<button class="button">
-			<a href="cv/cv_kristian_lindgren.pdf" target="_blank">Klicka här för att ladda ner mitt CV</a>
-		</button>
+		<a class="button" href="cv/cv_kristian_lindgren.pdf">Klicka här för att ladda ner mitt CV</a>
 	</section>
+
+	<section class="section section--centered" id="portfolio">
+		<h2>Portfolio</h2>
+
+		<div class="projects">
+				<a class="project" href="projects/todo/index.html">
+					<img class="project-thumbnail" src="img/todo.png">
+
+					<div class="project-description">
+						<h3>Todo app</h3>
+						<p>Liten app skriven i JS</p>
+					</div>
+				</a>
+
+				<a class="project" href="projects/lightsout/index.html">
+					<img class="project-thumbnail" src="img/lightsout.png">
+
+					<div class="project-description">
+						<h3>Light's Out</h3>
+						<p>Litet spel skrivet i JS</p>
+					</div>
+				</a>
+
+				<a class="project" href="http://lindgrenk.github.io/beanstalk/">
+					<img class="project-thumbnail" src="img/beanstalk.png">
+
+					<div class="project-description">
+						<h3>Beanstalk</h3>
+						<p>Hemsida skrivet i HTML/CSS</p>
+					</div>
+				</a>
+		</div>
+	</section>
+
+	<section class="section section--centered" id="contact">
+		<h2>Kontakt</h2>
+
+		<div class="contact">
+			<a href="https://se.linkedin.com/in/kristianlindgren" target="_blank">
+				<img class="contact-thumbnail" src="img/linkedin.png" alt="">
+			</a>
+
+			<a href="https://github.com/lindgrenk" target="_blank">
+				<img class="contact-thumbnail" src="img/github.png" alt="">
+			</a>
+
+			<ul class="contact-personal">
+				<li>Phone: +46 73 87 47 989</li>
+				<li>Email: <a href="mailto:lindgren.k@hotmail.com" class="mail">lindgren.k@hotmail.com</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<footer class="section section--centered">
+		<a href="#">
+			<img class="contact-logo" src="img/kl_logo.png" alt="">
+		</a>
+	</footer>
 
 </body>
 </html>
