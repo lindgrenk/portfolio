@@ -30,11 +30,15 @@ ul {
 }
 
 .header {
-	height: 450px;
+	height: 250px;
 	position: relative;
 
 	background: url(../img/mist.jpeg) center center;
 	background-size: cover;
+
+	@media @tabletUp {
+		height: 450px;
+	}
 }
 
 .header-nav {
@@ -68,13 +72,19 @@ ul {
 }
 
 .header-logo {
-	height: 120px;
-	width: 120px;
+	height: 90px;
+	width: 90px;
 	position: absolute;
 	left: 40px;
-	top: 30%;
+	top: 45%;
 
 	transform: translateY(-50%);
+
+	@media @tabletUp {
+		height: 120px;
+		width: 120px;
+		top: 30%;
+	}
 }
 
 .section {
@@ -277,6 +287,11 @@ ul {
 
 	list-style-type: none;
 	text-align: center;
+
+	a {
+		color: #000;
+		text-decoration: none;
+	}
 
 	@media @tabletUp {
 		text-align: left;
