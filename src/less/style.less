@@ -55,7 +55,7 @@ ul {
 	opacity: 0.8;
 
 	a {
-		padding: 10px 20px;
+		padding: 10px 10px;
 		display: inline-block;
 
 		color: #fff;
@@ -64,6 +64,10 @@ ul {
 
 		opacity: 0.8;
 		transition: opacity 200ms;
+
+		@media @tabletUp {
+			padding: 10px 20px;
+		}
 
 		&:hover {
 			opacity: 1;
@@ -257,6 +261,10 @@ ul {
 .contact {
 	text-align: center;
 	margin-bottom: 50px;
+
+	a {
+		display: inline-block;
+	}
 
 	@media @tabletUp {
 		display: flex;
