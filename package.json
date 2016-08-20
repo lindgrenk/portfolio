@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/lindgrenk/portfolio#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-less": "^3.1.0"
   }
 }

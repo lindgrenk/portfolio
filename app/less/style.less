@@ -217,16 +217,12 @@ ul {
 	width: 250px;
 
 	transition: all 200ms;
-	filter: grayscale(0%); /* Standard CSS */
-	-webkit-filter: grayscale(0%); /* CSS for Webkit Browsers */
-	filter: none;  /* Internet Explorer IE6-9 */
-	-webkit-filter: grayscale(0); /* Old WebKit Browsers */
+	filter: grayscale(0%);
 
 	&.project:hover {
 		transform: scale(1.1);
 		filter: grayscale(100%);
 		filter: gray;
-		-webkit-filter: grayscale(1); /* Old WebKit */
 	}
 }
 
