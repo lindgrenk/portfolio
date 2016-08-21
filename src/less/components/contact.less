@@ -1,0 +1,48 @@
+.contact {
+	text-align: center;
+	margin-bottom: 50px;
+
+	a {
+		display: inline-block;
+	}
+
+	@media @tabletUp {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.contact-thumbnail {
+	width: 50px;
+	height: auto;
+	margin: 10px;
+
+	opacity: 1;
+	transition: all 200ms;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.contact-personal {
+	margin-left: 20px;
+
+	list-style-type: none;
+	text-align: center;
+
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+
+	@media @tabletUp {
+		text-align: left;
+	}
+}
+
+.contact-logo {
+	width: 70px;
+	height: 100%;
+}

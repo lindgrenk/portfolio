@@ -1,0 +1,28 @@
+.section {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 40px 20px;
+	position: relative;
+
+	transition: all 200ms;
+
+	@media @tabletUp {
+		padding: 80px 20px;
+	}
+
+	+ .section::before {
+		position: absolute;
+		top: 0;
+		left: 20px;
+		right: 20px;
+		height: 1px;
+
+		background-color: #231F20;
+
+		content: '';
+	}
+
+	&.section--centered {
+		text-align: center;
+	}
+}

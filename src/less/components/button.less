@@ -1,0 +1,27 @@
+.button {
+	display: inline-block;
+	padding: 15px 30px;
+
+	border-radius: 5px;
+	border-width: 0;
+
+	background-color: #231f20;
+
+	font-size: 12px;
+	text-decoration: none;
+	color: #fff;
+
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity 200ms;
+
+	@media @tabletUp {
+		padding: 20px 40px;
+
+		font-size: 16px;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

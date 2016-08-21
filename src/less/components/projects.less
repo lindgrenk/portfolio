@@ -1,0 +1,48 @@
+.projects {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.project {
+	position: relative;
+	flex: auto;
+	margin: 10px;
+	width: 250px;
+
+	transition: all 200ms;
+	filter: grayscale(0%);
+
+	&.project:hover {
+		transform: scale(1.1);
+		filter: grayscale(100%);
+		filter: gray;
+	}
+}
+
+.project-thumbnail {
+	height: auto;
+	max-width: 250px;
+
+	border: 2px solid #aaa;
+	border-radius: 50%;
+
+	.project:hover & {
+		opacity: 0.3;
+	}
+}
+
+.project-description {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	z-index: -1;
+
+	.project:hover & {
+		color: #000;
+		z-index: 1;
+	}
+}
